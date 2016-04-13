@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ben Maddox's Source Viewer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ben Maddox tests out a source viewer and html tag counter" >
+</head>
+<body>
+<!-- Google Tag Manager -->
+<!-- Inject google analytics, because it's always a good idea to know about visits to your site -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K87FDN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K87FDN');</script>
+<!-- End Google Tag Manager -->
+<!--TODO Move this to it's own file -->
+<style>
+span
+{
+background-color:yellow;
+}
+</style>
+<div class="container">
+    <div class="jumbotron">
+		<h1>Source Finder</h1> 
+		<p>Built with jquery and bootstrap.</p> 
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="well" id="well">
+				<form class="form-horizontal" onsubmit="return getSource()" role="form">
+					<div class="form-group">				
+						<label class="control-label col-md-4 small">Get source for this URL</label>
+						<div class="col-md-8">
+							<input class="form-control" id="url" name="url" type="text"/>
+						</div>
+					</div>
+					<div class="text-center">
+						<button id="test" class="btn btn-md btn-success" type="submit">Get Source!</button>
+					</div>
+				</form>
+			</div>
+			<div>
+				<h3>Tag by Count:</h3>
+				<table class="table table-hover" id="tags"></table>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<h2>Page Source</h2>
+			<div id="sourceCode">
+			</div>
+		</div>
+	</div>
+</div>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/sourceview.js"></script>
+</body>
+</html>
