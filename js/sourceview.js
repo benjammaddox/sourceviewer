@@ -39,8 +39,7 @@ function getSource()
 {
 	resetData();
 	var url = $("#url").val(), 
-		//TODO Replace this with own proxy
-		crossOriginUrl = "https://crossorigin.me/",
+		crossOriginUrl = "https://61n6gcm045.execute-api.us-west-2.amazonaws.com/prod/httpProxy/",
 		newElem = $("<div></div>"),
 		elemDict = {};
 	if (url != ""){
